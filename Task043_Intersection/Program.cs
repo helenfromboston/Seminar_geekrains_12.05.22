@@ -17,7 +17,13 @@ x * (k1 - k2) + b1 - b2 = 0
 x * (k1 - k2) = b2 - b1
 x = (b2 - b1) / (k1 - k2) */
 
-double x = (b2 - b1) / (k1 - k2);
-double y = k2 * x + b2;
-
-Console.WriteLine($"Координаты точки пересечения прямых y = {k1} * x + {b1}, y = {k2} * x + {b2} = ({Math.Round(x, 2)};{Math.Round(y, 2)})");
+if (k1 == k2)
+{
+    Console.WriteLine($"Прямые y = {k1} * x + {b1}, y = {k2} * x + {b2} не пересекаются");
+}
+else
+{
+    double x = (b2 - b1) / (k1 - k2);
+    double y = k2 * x + b2;
+    Console.WriteLine($"Координаты точки пересечения прямых y = {k1} * x + {b1}, y = {k2} * x + {b2} = ({Math.Round(x, 2)};{Math.Round(y, 2)})");
+}
